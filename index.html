@@ -1,0 +1,396 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06120f">
+
+<title>SHARIAH TRADER INDIA | Halal Work</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1825824258865544');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1825824258865544&ev=PageView&noscript=1"/>
+</noscript>
+<!-- END META PIXEL -->
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(22,110,77,.35), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(191,153,65,.13), transparent 45%),
+    #06110e;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* BACKGROUND MARKET GRID */
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(94,174,130,.12) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(94,174,130,.12) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+/* BACKGROUND CANDLES */
+.market-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: .15;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.candle {
+  width: 5px;
+  height: 80px;
+  position: relative;
+  background: #25bd7a;
+  border-radius: 2px;
+}
+
+.candle:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 125%;
+  background: inherit;
+  left: 2px;
+  top: -12%;
+}
+
+.candle:nth-child(2n) {
+  background: #d7b45d;
+  height: 115px;
+}
+
+.candle:nth-child(3n) {
+  height: 55px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 455px;
+  z-index: 2;
+}
+
+.card {
+  position: relative;
+  padding: 46px 27px 34px;
+  text-align: center;
+  border-radius: 27px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(21,49,39,.91),
+    rgba(5,15,12,.95)
+  );
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 2px solid rgba(213,179,93,.85);
+
+  box-shadow:
+    0 0 0 5px rgba(207,174,90,.06),
+    0 0 40px rgba(19,172,108,.13),
+    0 0 35px rgba(215,178,87,.12),
+    inset 0 0 30px rgba(255,255,255,.035);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(221,190,119,.24);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.logo {
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  background: linear-gradient(145deg,#163c2b,#07130e);
+  border: 2px solid #d9b75e;
+
+  box-shadow:
+    0 0 25px rgba(213,180,89,.25),
+    inset 0 0 20px rgba(213,180,89,.12);
+}
+
+.logo span {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #e6c978;
+}
+
+.top-label {
+  color: #d8b96b;
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+h1 {
+  font-size: clamp(25px,7vw,33px);
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: .7px;
+  color: #f2e6c4;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #48d39a;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.market-tag {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 9px 17px;
+  border-radius: 30px;
+  color: #d6bb78;
+  border: 1px solid rgba(218,187,111,.45);
+  background: rgba(218,187,111,.07);
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+}
+ .line {
+  width: 85px;
+  height: 2px;
+  margin: 25px auto;
+  background: linear-gradient(90deg,transparent,#dfbd69,transparent);
+}
+
+.description {
+  max-width: 310px;
+  margin: 0 auto 27px;
+  color: #c6d3cb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.feature {
+  padding: 9px 11px;
+  border: 1px solid rgba(66,195,139,.28);
+  background: rgba(28,127,84,.10);
+  color: #a8d9bd;
+  border-radius: 9px;
+  font-size: 10px;
+  letter-spacing: .3px;
+}
+
+.join-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 58px;
+  border-radius: 13px;
+  border: 1px solid #f0d28a;
+
+  background: linear-gradient(
+    110deg,
+    #b38a36,
+    #f4dfa0,
+    #c59b47
+  );
+
+  color: #142019;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .9px;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 24px rgba(210,174,83,.25),
+    inset 0 1px 2px rgba(255,255,255,.7);
+
+  transition: .25s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 28px rgba(210,174,83,.4);
+}
+
+.join-btn:disabled {
+  opacity: .7;
+  cursor: wait;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  color: #89978e;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 25px;
+  color: #84948a;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+
+.footer span {
+  color: #d9b96b;
+}
+
+@media(max-width:380px) {
+  .card {
+    padding: 40px 19px 28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="market-bg" aria-hidden="true">
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+  <div class="candle"></div>
+</div>
+
+<div class="wrapper">
+  <main class="card">
+
+    <div class="logo">
+      <span>ST</span>
+    </div>
+
+    <div class="top-label">WELCOME TO</div>
+
+    <h1>SHARIAH<br>TRADER INDIA</h1>
+
+    <div class="subtitle">HALAL WORK</div>
+
+    <div class="market-tag">
+      STOCK MARKET COMMUNITY
+    </div>
+
+    <div class="line"></div>
+
+    <p class="description">
+      Explore stock market knowledge, educational
+      insights and market analysis.
+      Join our official Telegram community
+      and stay connected with us.
+    </p>
+
+    <div class="features">
+      <div class="feature">MARKET EDUCATION</div>
+      <div class="feature">MARKET ANALYSIS</div>
+      <div class="feature">LEARNING COMMUNITY</div>
+    </div>
+
+    <button class="join-btn" id="joinBtn" type="button">
+      JOIN TELEGRAM CHANNEL &nbsp; →
+    </button>
+
+    <p class="disclaimer">
+      Market investments are subject to risk.
+      All content is for educational and informational
+      purposes only. No guaranteed returns.
+    </p>
+
+    <div class="footer">
+      OFFICIAL COMMUNITY <span>•</span> SHARIAH TRADER INDIA
+    </div>
+
+  </main>
+</div>
+
+<script>
+const joinBtn = document.getElementById("joinBtn");
+
+joinBtn.addEventListener("click", function() {
+
+  if (joinBtn.disabled) return;
+
+  joinBtn.disabled = true;
+  joinBtn.textContent = "CONNECTING...";
+
+  // MANUAL SUBSCRIBE EVENT
+  if (typeof fbq === "function") {
+    fbq('track', 'Subscribe');
+  }
+
+  // TELEGRAM REDIRECT
+  setTimeout(function() {
+    window.location.href =
+      "https://t.me/+e1aLOWaj5Yg5ZTg0";
+  }, 500);
+
+});
+</script>
+
+</body>
+</html>
